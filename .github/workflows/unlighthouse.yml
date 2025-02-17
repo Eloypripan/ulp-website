@@ -1,5 +1,4 @@
 name: Unlighthouse Audit
-    # En este chachi archivo vamos a automatizar la ejecución unlighthouse
 on:
   push:
     branches: [ main ]
