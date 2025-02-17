@@ -1,6 +1,5 @@
-#En este chachi archivo vamos a automatizar la ejecución unlighthouse
-
 name: Unlighthouse Audit
+    # En este chachi archivo vamos a automatizar la ejecución unlighthouse
 on:
   push:
     branches: [ main ]
@@ -25,8 +24,8 @@ jobs:
 
       - name: Run Unlighthouse
         run: unlighthouse ci https://ulp.ugr.es --site-key ulp-ugr --budget '{"performance":90,"accessibility":90,"best-practices":90,"seo":90}'
-        #en el budget he definido los valores que considero aceptables para cada uno de los aspectos que se puede medir
-        #los valores que yo es puesto son completamente subjetivos, y he puesto 90 porque me ha dado la gana jaja
+        # en el budget he definido los valores que considero aceptables para cada uno de los aspectos que se puede medir
+        # los valores que yo es puesto son completamente subjetivos, y he puesto 90 porque me ha dado la gana jaja
 
       - name: Upload results
         if: always()
